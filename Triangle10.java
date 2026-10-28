@@ -6,15 +6,28 @@ public class Triangle10 {
         System.out.print("Masukkan nilai n = ");
         int n = sc.nextInt();
 
-        int i = 1;
+        // Segitiga bertingkat
+        int i = 1;                     
         while (i <= n) {
-            int j = 1;
+            int j = 0;                 
+            while (j <= i) {
+                System.out.print("*");
+                j++;
+            }
+            System.out.println();      
+            i++;
+        }
+
+        // Segitiga terbalik
+        i = n;                          
+        while (i >= 1) {
+            int j = 0;
             while (j <= i) {
                 System.out.print("*");
                 j++;
             }
             System.out.println();
-            i++;
+            i--;
         }
         sc.close();
     }
